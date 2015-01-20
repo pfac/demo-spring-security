@@ -17,6 +17,7 @@ create table custom_users(
 
 create table custom_roles (
     email varchar_ignorecase(50) not null,
-    role varchar_ignorecase(50) not null,
+    prefix varchar_ignorecase(20) not null,
+    role varchar_ignorecase(30) not null,
     constraint fk_authorities_custom_users foreign key(email) references custom_users(email)
 );

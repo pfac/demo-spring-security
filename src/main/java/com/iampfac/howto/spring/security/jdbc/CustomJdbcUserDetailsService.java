@@ -5,7 +5,9 @@ import java.sql.SQLException;
 import java.util.List;
 
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -15,7 +17,7 @@ public class CustomJdbcUserDetailsService extends JdbcDaoImpl {
 
 	public static final String DEF_USERS_BY_USERNAME_QUERY = "select email,secret from custom_users where email = ?";
 
-	public static final String DEF_ROLES_BY_USERNAME_QUERY = "select email,role from custom_roles where email = ?";
+	public static final String DEF_ROLES_BY_USERNAME_QUERY = "select email,prefix,role from custom_roles where email = ?";
 
 	public CustomJdbcUserDetailsService() {
 		super();
@@ -36,5 +38,16 @@ public class CustomJdbcUserDetailsService extends JdbcDaoImpl {
 		};
 		final Object[] args = new String[] { email };
 		return getJdbcTemplate().query(getUsersByUsernameQuery(), args, mapper);
+	}
+
+	@Override
+	protected List<GrantedAuthority> loadUserAuthorities(String username) {
+		return getJdbcTemplate().query(getAuthoritiesByUsernameQuery(), new String[] { username }, new RowMapper<GrantedAuthority>() {
+			public GrantedAuthority mapRow(ResultSet rs, int rowNum) throws SQLException {
+				String roleName = rs.getString(2) + rs.getString(3);
+
+				return new SimpleGrantedAuthority(roleName);
+			}
+		});
 	}
 }
