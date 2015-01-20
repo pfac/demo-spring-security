@@ -15,7 +15,8 @@ public class DataConfiguration {
 	public DataSource dataSource() {
 		final String prefix = "com/iampfac/howto/spring/security/";
 		EmbeddedDatabase bean = new EmbeddedDatabaseBuilder().setType(EmbeddedDatabaseType.H2).setScriptEncoding("UTF-8").ignoreFailedDrops(true)
-				.addScript(prefix + "schema.sql").addScripts(prefix + "users.sql", prefix + "roles.sql").build();
+				.addScript(prefix + "schema.sql").addScripts(prefix + "users.sql", prefix + "roles.sql")
+				.addScripts(prefix + "custom_users.sql", prefix + "custom_roles.sql").build();
 		return bean;
 	}
 
