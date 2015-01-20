@@ -13,11 +13,18 @@ This project aims mainly to achieve a working configuration that includes userna
 
 In this project we have a Messenger service, which is only accessible to regular users. Administrators are not authorized to access this service (I know, doesn't make sense, but it doesn't really matter).
 
-There are two built-in users:
+Configured authentication providers:
+* In memory, configured in `SecurityConfiguration`. Usernames start with `mem`
+* JDBC, through an embedded H2 database. Usernames start with `db`
 
-There are two users built into the app:
-* regular user `pedro`/`costa`, which accesses the service successfully.
-* admin `costa`/`pedro`, which is not authorized to access the service.
+Built-in users:
+
+| Username | Password | Type | Result |
+| -------- | -------- | ---- | ------ |
+| `memdemo`  | `secret` | user | Success |
+| `memadmin` | `53cr37` | admin | Access denied |
+| `dbdemo`   | `secret` | user | Success |
+| `dbadmin`  | `53cr37` | admin | Access denied |
 
 
 ## Build it
