@@ -16,6 +16,7 @@ In this project we have a Messenger service, which is only accessible to regular
 Configured authentication providers:
 * In memory, configured in `SecurityConfiguration`. Usernames start with `mem`
 * JDBC, through an embedded H2 database. Usernames start with `db`
+* Custom JDBC, through the same embedded H2 database but using completely distinct tables. Usernames are replaced with emails ending in `@example.org`
 
 Built-in users:
 
@@ -25,6 +26,8 @@ Built-in users:
 | `memadmin` | `53cr37` | admin | Access denied |
 | `dbdemo`   | `secret` | user | Success |
 | `dbadmin`  | `53cr37` | admin | Access denied |
+| `demo@example.org`  | `secret` | user | Success |
+| `admin@example.org`  | `53cr37` | admin | Access denied |
 
 
 ## Build it
