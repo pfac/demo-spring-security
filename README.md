@@ -14,9 +14,10 @@ This project aims mainly to achieve a working configuration that includes userna
 In this project we have a Messenger service, which is only accessible to regular users. Administrators are not authorized to access this service (I know, doesn't make sense, but it doesn't really matter).
 
 Configured authentication providers:
-* In memory, configured in `SecurityConfiguration`. Usernames start with `mem`
-* JDBC, through an embedded H2 database. Usernames start with `db`
-* Custom JDBC, through the same embedded H2 database but using completely distinct tables. Usernames are replaced with emails ending in `@example.org`
+* In memory, configured in `SecurityConfiguration`. Usernames start with `mem`.
+* JDBC, through an embedded H2 database. Usernames start with `db`.
+* Custom JDBC, through the same embedded H2 database but using completely distinct tables. Usernames are replaced with emails ending in `@example.org`.
+* LDAP, through an embedded LDAP server. Usernames start with `ldap`.
 
 Built-in users:
 
@@ -28,6 +29,8 @@ Built-in users:
 | `dbadmin`  | `53cr37` | admin | Access denied |
 | `demo@example.org`  | `secret` | user | Success |
 | `admin@example.org`  | `53cr37` | admin | Access denied |
+| `ldapdemo`   | `secret` | user | Success |
+| `ldapadmin`  | `53cr37` | admin | Access denied |
 
 
 ## Build it
