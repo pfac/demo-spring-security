@@ -36,6 +36,8 @@ public class SecurityConfiguration extends GlobalMethodSecurityConfiguration {
 		auth.jdbcAuthentication().dataSource(dataSource);
 		auth.inMemoryAuthentication().withUser("memdemo").password("secret").roles("USER").and().withUser("memadmin").password("53cr37").roles("ADMIN");
 		auth.authenticationProvider(customJdbcProvider);
+		auth.ldapAuthentication().userDnPatterns("uid={0},ou=users").groupSearchBase("ou=groups").contextSource()
+				.ldif("classpath:com/iampfac/howto/spring/security/users.ldif").root("dc=example,dc=org");
 	}
 
 	@Autowired

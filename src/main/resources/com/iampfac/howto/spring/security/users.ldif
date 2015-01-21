@@ -1,0 +1,49 @@
+# Users
+dn: ou=users,dc=example,dc=org
+objectClass: top
+objectClass: organizationalUnit
+ou: users
+
+dn: uid=ldapdemo,ou=users,dc=example,dc=org
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: demo
+gn: El
+sn: Demo
+mail: demo@example.org
+uid: ldapdemo
+userPassword: secret
+
+dn: uid=ldapadmin,ou=users,dc=example,dc=org
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: admin
+gn: El
+sn: Administrator
+mail: admin@example.org
+uid: ldapadmin
+userPassword: 53cr37
+
+# Groups
+dn: ou=groups,dc=example,dc=org
+objectClass: top
+objectClass: organizationalUnit
+ou: groups
+
+dn: cn=admins,ou=groups,dc=example,dc=org
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: administrators
+ou: administrator
+uniqueMember: uid=admin,ou=users,dc=example,dc=com
+
+dn: cn=users,ou=groups,dc=example,dc=org
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: users
+ou: user
+uniqueMember: uid=demo,ou=users,dc=example,dc=com
