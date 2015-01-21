@@ -41,7 +41,7 @@ public class CustomJdbcUserDetailsService extends JdbcDaoImpl {
 	}
 
 	@Override
-	protected List<GrantedAuthority> loadUserAuthorities(String username) {
+	public List<GrantedAuthority> loadUserAuthorities(String username) {
 		return getJdbcTemplate().query(getAuthoritiesByUsernameQuery(), new String[] { username }, new RowMapper<GrantedAuthority>() {
 			public GrantedAuthority mapRow(ResultSet rs, int rowNum) throws SQLException {
 				String roleName = rs.getString(2) + rs.getString(3);

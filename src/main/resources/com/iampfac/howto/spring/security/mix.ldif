@@ -1,0 +1,29 @@
+# Users
+dn: ou=users,dc=example,dc=org
+objectClass: top
+objectClass: organizationalUnit
+ou: users
+
+dn: uid=mixdemo,ou=users,dc=example,dc=org
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: mixdemo
+gn: Mixed
+sn: Demo
+mail: demo@example.org
+uid: mixdemo
+userPassword: secret
+
+dn: uid=mixadmin,ou=users,dc=example,dc=org
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: mixadmin
+gn: Mixed
+sn: Administrator
+mail: admin@example.org
+uid: mixadmin
+userPassword: 53cr37

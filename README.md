@@ -18,6 +18,7 @@ Configured authentication providers:
 * JDBC, through an embedded H2 database. Usernames start with `db`.
 * Custom JDBC, through the same embedded H2 database but using completely distinct tables. Usernames are replaced with emails ending in `@example.org`.
 * LDAP, through an embedded LDAP server. Usernames start with `ldap`.
+* Custom LDAP + JDBC, where authentication is performed using an embedded LDAP server and authorization is loaded from the embedded database. Usernames start with `mix`.
 
 Built-in users:
 
@@ -31,6 +32,8 @@ Built-in users:
 | `admin@example.org`  | `53cr37` | admin | Access denied |
 | `ldapdemo`   | `secret` | user | Success |
 | `ldapadmin`  | `53cr37` | admin | Access denied |
+| `mixdemo`   | `secret` | user | Success |
+| `mixadmin`  | `53cr37` | admin | Access denied |
 
 
 ## Build it

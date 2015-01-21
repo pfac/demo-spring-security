@@ -12,6 +12,7 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration;
 
 import com.iampfac.howto.spring.security.jdbc.CustomJdbcUserDetailsService;
+import com.iampfac.howto.spring.security.ldap.CustomLdapAuthoritiesPopulator;
 
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)
@@ -33,11 +34,16 @@ public class SecurityConfiguration extends GlobalMethodSecurityConfiguration {
 		DaoAuthenticationProvider customJdbcProvider = new DaoAuthenticationProvider();
 		customJdbcProvider.setUserDetailsService(customJdbcUserDetailsService);
 
+		CustomLdapAuthoritiesPopulator customLdapAuthoritiesPopulator = new CustomLdapAuthoritiesPopulator(customJdbcUserDetailsService);
+
 		auth.jdbcAuthentication().dataSource(dataSource);
 		auth.inMemoryAuthentication().withUser("memdemo").password("secret").roles("USER").and().withUser("memadmin").password("53cr37").roles("ADMIN");
 		auth.authenticationProvider(customJdbcProvider);
 		auth.ldapAuthentication().userDnPatterns("uid={0},ou=users").groupSearchBase("ou=groups").groupRoleAttribute("ou").contextSource()
 				.ldif("classpath:com/iampfac/howto/spring/security/users.ldif").root("dc=example,dc=org");
+
+		auth.ldapAuthentication().ldapAuthoritiesPopulator(customLdapAuthoritiesPopulator).userDnPatterns("uid={0},ou=users").contextSource()
+				.ldif("classpath:com/iampfac/howto/spring/security/mix.ldif").root("dc=example,dc=org");
 	}
 
 	@Autowired
