@@ -4,7 +4,7 @@
 
   <parent>
     <groupId>com.iampfac.howto</groupId>
-    <artifactId>howto-spring-security</artifactId>
+    <artifactId>howto-spring-security-memory</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
@@ -17,6 +17,12 @@
     <dependency>
       <groupId>com.iampfac.howto</groupId>
       <artifactId>howto-spring-security-common</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.iampfac.howto</groupId>
+      <artifactId>howto-spring-security-memory-common</artifactId>
+      <type>test-jar</type>
     </dependency>
 
     <dependency>

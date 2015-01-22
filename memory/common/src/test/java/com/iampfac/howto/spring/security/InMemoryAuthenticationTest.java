@@ -11,14 +11,12 @@ import org.springframework.security.authentication.AuthenticationCredentialsNotF
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.iampfac.howto.spring.security.core.Messenger;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({ "in-memory-security-context.xml", "test-context.xml" })
-public class XmlInMemoryAuthenticationTest {
+public abstract class InMemoryAuthenticationTest {
 
 	@Autowired
 	private Messenger service;
@@ -38,14 +36,6 @@ public class XmlInMemoryAuthenticationTest {
 	@Test(expected = BadCredentialsException.class)
 	public void itDoesNotExecuteBecauseUserAuthenticatedWithWrongCredentials() {
 		login("user", "sercet");
-		service.getMessage();
-	}
-
-	/*
-	 * it executes correctly when user authenticated successfully
-	 */
-	public void itExecutesCorrectlyWhenUserAuthenticatedSuccessfully() {
-		login("user", "secret");
 		service.getMessage();
 	}
 

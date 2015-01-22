@@ -4,14 +4,14 @@
 
   <parent>
     <groupId>com.iampfac.howto</groupId>
-    <artifactId>howto-spring-security</artifactId>
+    <artifactId>howto-spring-security-memory</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>howto-spring-security-memory-xml</artifactId>
-  <name>HowTo: Spring Security - InMemory - XML</name>
-  <description>Sample implementing authentication and authorization using an in-memory authentication provider, configured with XML.</description>
+  <artifactId>howto-spring-security-memory-common</artifactId>
+  <name>HowTo: Spring Security - InMemory - Common</name>
+  <description>Tools and utilities shared between all in-memory samples.</description>
 
   <dependencies>
     <dependency>
