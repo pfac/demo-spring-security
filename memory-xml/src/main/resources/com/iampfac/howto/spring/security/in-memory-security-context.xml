@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:beans="http://www.springframework.org/schema/beans"
+  xmlns:security="http://www.springframework.org/schema/security"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/security
+    http://www.springframework.org/schema/security/spring-security.xsd
+  "
+>
+  
+  <security:authentication-manager id="authenticationManager">
+    <security:authentication-provider>
+      <security:user-service>
+        <security:user name="user" password="secret" authorities="ROLE_USER" />
+        <security:user name="admin" password="53cr37" authorities="ROLE_ADMIN" />
+      </security:user-service>
+    </security:authentication-provider>
+  </security:authentication-manager>
+  
+  <security:global-method-security authentication-manager-ref="authenticationManager" pre-post-annotations="enabled" />
+  
+</beans:beans>
