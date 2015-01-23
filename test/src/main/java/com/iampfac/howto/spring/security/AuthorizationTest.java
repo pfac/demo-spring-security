@@ -16,7 +16,7 @@ public abstract class AuthorizationTest extends SecurityTest {
 	 */
 	@Test(expected = AccessDeniedException.class)
 	public void itDoesNotExecuteBecauseUserDoesNotHaveRequiredRole() {
-		login("demo", "secret");
+		loginAsDemo();
 		getService().getSecretMessage();
 	}
 
@@ -26,7 +26,7 @@ public abstract class AuthorizationTest extends SecurityTest {
 	 */
 	@Test
 	public void itExecutesCorrectlyWhenUserAuthenticatedSuccessfullyAndHasTheRequiredRole() {
-		login("admin", "53cr37");
+		loginAsAdmin();
 
 		final String secretMessage = getService().getSecretMessage();
 		Assert.assertTrue(StringUtils.isNotBlank(secretMessage));

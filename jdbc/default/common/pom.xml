@@ -12,4 +12,16 @@
   <artifactId>howto-spring-security-jdbc-default-common</artifactId>
   <name>HowTo: Spring Security - JDBC - Default Schema - Common</name>
   <description>Resources shared between all JDBC samples using the Spring default schema.</description>
+  
+  <dependencies>
+    <dependency>
+      <groupId>com.iampfac.howto</groupId>
+      <artifactId>howto-spring-security-jdbc-common</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-config</artifactId>
+    </dependency>
+  </dependencies>
 </project>

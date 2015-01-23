@@ -16,7 +16,20 @@ import com.iampfac.howto.spring.security.core.SimpleMessenger;
  *
  */
 @Configuration
-public class TestContext {
+public abstract class TestContext {
+
+	/**
+	 * Creates and exposes a {@link TestAuthenticator} bean.
+	 * 
+	 * Allows for each sub-module in the project to redefine how it wishes
+	 * authentication to be performed in its tests.
+	 * 
+	 * Implementations of this method are expected to hold the @{@link Bean}
+	 * annotation.
+	 * 
+	 * @return a new instance of {@link TestAuthenticator}.
+	 */
+	public abstract TestAuthenticator authenticator();
 
 	/**
 	 * Exposes a {@link com.iampfac.howto.spring.security.core.Messenger} bean.

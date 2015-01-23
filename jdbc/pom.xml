@@ -16,6 +16,7 @@
   <modules>
     <module>common</module>
     <module>default</module>
+    <module>custom-users</module>
   </modules>
   
   <dependencyManagement>

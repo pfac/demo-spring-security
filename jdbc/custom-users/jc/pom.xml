@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.iampfac.howto</groupId>
+    <artifactId>howto-spring-security-jdbc-custom-users</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>..</relativePath>
+  </parent>
+
+  <artifactId>howto-spring-security-jdbc-custom-users-jc</artifactId>
+  <name>HowTo: Spring Security - JDBC - Custom Users - Java Config</name>
+  <description>Sample implementing authentication and authorization using an JDBC authentication provider and an embedded database. This sample uses a custom schema for the users table, and the default schema for the roles table. Configured programatically.</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.iampfac.howto</groupId>
+      <artifactId>howto-spring-security-jdbc-common</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.iampfac.howto</groupId>
+      <artifactId>howto-spring-security-jdbc-custom-users-common</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.iampfac.howto</groupId>
+      <artifactId>howto-spring-security-jdbc-custom-users-test</artifactId>
+    </dependency>
+  </dependencies>
+</project>
