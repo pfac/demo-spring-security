@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <artifactId>howto-spring-security</artifactId>
+    <groupId>com.iampfac.howto</groupId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>..</relativePath>
+  </parent>
+  
+  <artifactId>howto-spring-security-jdbc</artifactId>
+  <name>HowTo: Spring Security - JDBC</name>
+  <description>Samples implementing authentication and authorization using an JDBC authentication provider and an embedded database.</description>
+  <packaging>pom</packaging>
+  
+  <modules>
+    <module>common</module>
+    <module>default</module>
+  </modules>
+  
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.iampfac.howto</groupId>
+        <artifactId>howto-spring-security-jdbc-common</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

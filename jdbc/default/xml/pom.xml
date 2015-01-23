@@ -9,21 +9,21 @@
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>howto-spring-security-jdbc-default-jc</artifactId>
-  <name>HowTo: Spring Security - JDBC - Default Schema - Java Config</name>
-  <description>Sample implementing authentication and authorization using a JDBC authentication provider and an embedded database with the default Spring schema. Configured programatically.</description>
+  <artifactId>howto-spring-security-jdbc-default-xml</artifactId>
+  <name>HowTo: Spring Security - JDBC - Default Schema - XML</name>
+  <description>Sample implementing authentication and authorization using a JDBC authentication provider and an embedded database with the default Spring schema. Configured with XML.</description>
 
   <dependencies>
     <dependency>
       <groupId>com.iampfac.howto</groupId>
       <artifactId>howto-spring-security-jdbc-common</artifactId>
     </dependency>
-
+    
     <dependency>
       <groupId>com.iampfac.howto</groupId>
       <artifactId>howto-spring-security-jdbc-default-common</artifactId>
     </dependency>
-    
+  
     <dependency>
       <groupId>com.iampfac.howto</groupId>
       <artifactId>howto-spring-security-test</artifactId>
