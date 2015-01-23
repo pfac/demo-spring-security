@@ -16,7 +16,7 @@
   <modules>
     <module>common</module>
     <module>jc</module>
-<!--     <module>xml</module> -->
+    <module>xml</module>
   </modules>
   
   <dependencyManagement>
