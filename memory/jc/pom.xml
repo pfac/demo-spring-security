@@ -21,8 +21,7 @@
     
     <dependency>
       <groupId>com.iampfac.howto</groupId>
-      <artifactId>howto-spring-security-memory-common</artifactId>
-      <type>test-jar</type>
+      <artifactId>howto-spring-security-test</artifactId>
     </dependency>
 
     <dependency>

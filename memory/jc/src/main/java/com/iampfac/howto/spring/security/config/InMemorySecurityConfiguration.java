@@ -19,6 +19,6 @@ public class InMemorySecurityConfiguration extends GlobalMethodSecurityConfigura
 
 	@Override
 	public void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.inMemoryAuthentication().withUser("user").password("secret").roles("USER").and().withUser("admin").password("53cr37").roles("ADMIN");
+		auth.inMemoryAuthentication().withUser("demo").password("secret").roles("USER").and().withUser("admin").password("53cr37").roles("ADMIN");
 	}
 }

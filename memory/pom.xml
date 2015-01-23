@@ -14,20 +14,7 @@
   <packaging>pom</packaging>
   
   <modules>
-    <module>common</module>
     <module>jc</module>
     <module>xml</module>
   </modules>
-  
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>com.iampfac.howto</groupId>
-        <artifactId>howto-spring-security-memory-common</artifactId>
-        <version>${project.version}</version>
-        <type>test-jar</type>
-        <scope>test</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
 </project>
