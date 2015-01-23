@@ -13,7 +13,22 @@
   <name>HowTo: Spring Security - Test Tools</name>
   <description>Tools and utilities to be used tests. These are shared between all the samples in the HowTo: Spring Security project.</description>
   
+  <properties>
+     <junit.version>4.12</junit.version>
+  </properties>
+  
   <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+  
     <dependency>
       <groupId>com.iampfac.howto</groupId>
       <artifactId>howto-spring-security-common</artifactId>
