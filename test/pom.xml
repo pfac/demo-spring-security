@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.iampfac.howto</groupId>
+    <artifactId>howto-spring-security</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>..</relativePath>
+  </parent>
+
+  <artifactId>howto-spring-security-test</artifactId>
+  <name>HowTo: Spring Security - Test Tools</name>
+  <description>Tools and utilities to be used tests. These are shared between all the samples in the HowTo: Spring Security project.</description>
+  
+  <dependencies>
+    <dependency>
+      <groupId>com.iampfac.howto</groupId>
+      <artifactId>howto-spring-security-common</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-config</artifactId>
+    </dependency>
+  </dependencies>
+</project>
