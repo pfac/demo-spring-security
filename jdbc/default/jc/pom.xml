@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.iampfac.howto</groupId>
+    <artifactId>howto-spring-security-jdbc-default</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>..</relativePath>
+  </parent>
+
+  <artifactId>howto-spring-security-jdbc-default-jc</artifactId>
+  <name>HowTo: Spring Security - JDBC - Default Schema - Java Config</name>
+  <description>Sample implementing authentication and authorization using a JDBC authentication provider and an embedded database with the default Spring schema. Configured programatically.</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.iampfac.howto</groupId>
+      <artifactId>howto-spring-security-jdbc-common</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.iampfac.howto</groupId>
+      <artifactId>howto-spring-security-jdbc-default-common</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.iampfac.howto</groupId>
+      <artifactId>howto-spring-security-test</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+    </dependency>
+  </dependencies>
+</project>
