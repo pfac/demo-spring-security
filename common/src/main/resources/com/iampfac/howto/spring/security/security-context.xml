@@ -11,15 +11,6 @@
   "
 >
   
-  <beans:import resource="security-context.xml" />
-  
-  <security:authentication-manager id="authenticationManager">
-    <security:authentication-provider>
-      <security:user-service>
-        <security:user name="demo" password="secret" authorities="ROLE_USER" />
-        <security:user name="admin" password="53cr37" authorities="ROLE_ADMIN" />
-      </security:user-service>
-    </security:authentication-provider>
-  </security:authentication-manager>
+  <security:global-method-security authentication-manager-ref="authenticationManager" pre-post-annotations="enabled" />
   
 </beans:beans>

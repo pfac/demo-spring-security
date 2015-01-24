@@ -6,7 +6,21 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 
+/**
+ * Base test configuration for JDBC samples.
+ * 
+ * Builds an embedded database using three files: - schema.sql - users.sql -
+ * roles.sql
+ * 
+ * Each specific configuration using JDBC should provide these files with the
+ * expected database format and data.
+ * 
+ * @author Pedro Costa &lt;pedro.costa@vilt-group.com&gt;
+ *
+ */
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class JdbcSecurityContext extends SecurityContext {
 
 	@Bean

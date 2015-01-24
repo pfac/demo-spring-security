@@ -9,12 +9,6 @@ import org.springframework.security.config.annotation.method.configuration.Globa
 /**
  * Base class for configuring the security context in any of the samples.
  * 
- * Any subclass inherits
- * {@link org.springframework.context.annotation.Configuration}, enables method
- * security (including annotations like
- * {@link org.springframework.security.access.prepost.PreAuthorize}) and exposes
- * the {@link AuthenticationManager} as a public bean.
- * 
  * @author Pedro Costa &lt;pedro.costa@vilt-group.com&gt;
  *
  */

@@ -4,7 +4,9 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class DefaultJdbcSecurityContext extends JdbcSecurityContext {
 
 	@Autowired

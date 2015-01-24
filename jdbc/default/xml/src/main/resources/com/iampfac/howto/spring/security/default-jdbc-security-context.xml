@@ -13,12 +13,12 @@
     http://www.springframework.org/schema/security/spring-security.xsd
   "
 >
-  <beans:import resource="security-context.xml" />
+  <beans:import resource="jdbc-security-context.xml" />
   
-  <jdbc:embedded-database id="dataSource" type="H2">
-    <jdbc:script location="com/iampfac/howto/spring/security/schema.sql" />
-    <jdbc:script location="com/iampfac/howto/spring/security/users.sql" />
-    <jdbc:script location="com/iampfac/howto/spring/security/roles.sql" />
-  </jdbc:embedded-database>
-
+  <security:jdbc-user-service id="jdbcUserService" data-source-ref="dataSource" />
+  
+  <security:authentication-manager id="authenticationManager">
+    <security:authentication-provider user-service-ref="jdbcUserService" />
+  </security:authentication-manager>
+  
 </beans:beans>

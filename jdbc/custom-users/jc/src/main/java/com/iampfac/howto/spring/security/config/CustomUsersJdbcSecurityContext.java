@@ -9,7 +9,6 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
-import com.iampfac.howto.spring.security.config.JdbcSecurityContext;
 import com.iampfac.howto.spring.security.jdbc.CustomUsersJdbcUserDetailsService;
 
 public class CustomUsersJdbcSecurityContext extends JdbcSecurityContext {
