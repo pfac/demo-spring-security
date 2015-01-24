@@ -3,6 +3,8 @@ HowTo: Spring Security
 
 [![Build Status](https://travis-ci.org/pfac/howto-spring-security.svg?branch=master)](https://travis-ci.org/pfac/howto-spring-security)
 
+**This project is currently not stable. As such, this README has not been updated yet. For a stable reference please refer to tag 0.0.1-SNAPSHOT**
+
 
 Based on the [official Spring Security reference documentation][spring-security].
 

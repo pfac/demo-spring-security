@@ -3,7 +3,7 @@
   
   <groupId>com.iampfac.howto</groupId>
   <artifactId>howto-spring-security</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.1.0-SNAPSHOT</version>
   <name>HowTo: Use Spring Security (defaults)</name>
   <description>Minimal working example of a project using Spring Security in an application.</description>
   <packaging>pom</packaging>
@@ -181,4 +181,9 @@
       </build>
     </profile>
   </profiles>
+  <scm>
+    <url>https://github.com/pfac/howto-spring-security</url>
+    <connection>scm:git:git://github.com/pfac/howto-spring-security.git</connection>
+    <developerConnection>scm:git:git@github.com:pfac/howto-spring-security.git</developerConnection>
+  </scm>
 </project>
