@@ -1,6 +1,8 @@
 HowTo: Spring Security
 ======================
 
+![HowTo: Spring Security][logo]
+
 [![Build Status](https://travis-ci.org/pfac/howto-spring-security.svg?branch=master)](https://travis-ci.org/pfac/howto-spring-security)
 
 **This project is currently not stable. As such, this README has not been updated yet. For a stable reference please refer to tag 0.0.1-SNAPSHOT**
@@ -62,7 +64,7 @@ java -jar target/spring-security-0.0.1-SNAPSHOT-jar-with-dependencies.jar
 
 Project under the [MIT License][mit].
 
-
+[logo]: https://github.com/pfac/howto-spring-security/raw/master/src/site/resources/images/howto-spring-security-logo.png
 [spring-security]: http://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#tech-intro-authentication
 [maven]: http://maven.apache.org/
 [mit]: http://opensource.org/licenses/MIT
