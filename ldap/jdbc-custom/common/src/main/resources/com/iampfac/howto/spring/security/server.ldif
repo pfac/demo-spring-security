@@ -1,0 +1,49 @@
+# Users
+dn: ou=users,dc=example,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: users
+
+dn: uid=demo,ou=users,dc=example,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: demo
+gn: El
+sn: Demo
+mail: demo@example.com
+uid: demo
+userPassword: secret
+
+dn: uid=admin,ou=users,dc=example,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: admin
+gn: El
+sn: Administrator
+mail: admin@example.com
+uid: admin
+userPassword: 53cr37
+
+# Groups
+dn: ou=groups,dc=example,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: groups
+
+dn: cn=administrators,ou=groups,dc=example,dc=com
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: administrators
+ou: administrator
+uniqueMember: uid=admin,ou=users,dc=example,dc=com
+
+dn: cn=clients,ou=groups,dc=example,dc=com
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: clients
+ou: client
+uniqueMember: uid=demo,ou=users,dc=example,dc=com

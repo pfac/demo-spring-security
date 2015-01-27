@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+  xmlns:beans="http://www.springframework.org/schema/beans"
+  xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+  xmlns:security="http://www.springframework.org/schema/security"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/jdbc
+    http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+    http://www.springframework.org/schema/security
+    http://www.springframework.org/schema/security/spring-security.xsd
+  "
+>
+  <beans:import resource="test-context.xml" />
+  
+  <beans:bean class="com.iampfac.howto.spring.security.LdapTestAuthenticator" />
+  
+  <security:ldap-server id="contextSource" root="dc=example,dc=com" ldif="classpath:/com/iampfac/howto/spring/security/server.ldif" />
+  
+  <jdbc:embedded-database id="dataSource" type="H2">
+    <jdbc:script location="com/iampfac/howto/spring/security/schema.sql" />
+    <jdbc:script location="com/iampfac/howto/spring/security/roles.sql" />
+    <jdbc:script location="com/iampfac/howto/spring/security/authorities.sql" />
+  </jdbc:embedded-database>
+  
+</beans:beans>

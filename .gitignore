@@ -1,1 +1,6 @@
 /target
+/test/
+/jdbc/
+/common/
+/memory/
+/all/

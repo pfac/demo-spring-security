@@ -13,6 +13,7 @@
     <module>test</module>
     <module>memory</module>
     <module>jdbc</module>
+    <module>ldap</module>
   </modules>
   
   <properties>
@@ -38,6 +39,11 @@
         
   
     <!-- Loggging -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>jcl-over-slf4j</artifactId>
@@ -106,7 +112,7 @@
         <artifactId>spring-jdbc</artifactId>
         <version>${spring.version}</version>
       </dependency>
-      
+
       <dependency>
         <groupId>org.springframework.ldap</groupId>
         <artifactId>spring-ldap-core</artifactId>
@@ -159,28 +165,6 @@
     </pluginManagement>
   </build>
   
-  <profiles>
-    <profile>
-      <activation>
-        <file>
-          <missing>target/*.jar</missing>
-        </file>
-      </activation>
-      <build>
-        <pluginManagement>
-          <plugins>
-            <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-install-plugin</artifactId>
-              <configuration>
-                <skip>true</skip>
-              </configuration>
-            </plugin>
-          </plugins>
-        </pluginManagement>
-      </build>
-    </profile>
-  </profiles>
   <scm>
     <url>https://github.com/pfac/howto-spring-security</url>
     <connection>scm:git:git://github.com/pfac/howto-spring-security.git</connection>

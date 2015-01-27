@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <artifactId>howto-spring-security-ldap-jdbc-custom</artifactId>
+    <groupId>com.iampfac.howto</groupId>
+    <version>0.1.0-SNAPSHOT</version>
+    <relativePath>..</relativePath>
+  </parent>
+  
+  <artifactId>howto-spring-security-ldap-jdbc-custom-test</artifactId>
+  <name>HowTo: Spring Security - LDAP + JDBC Custom - Test</name>
+  <description>Test resources shared between all samples implementing authentication using an LDAP authentication provider and authorization using a JDBC authorities populator with a custom schema.</description>
+  
+  <dependencies>
+    <dependency>
+      <groupId>com.iampfac.howto</groupId>
+      <artifactId>howto-spring-security-test</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.apache.directory.server</groupId>
+      <artifactId>apacheds-server-unit</artifactId>
+    </dependency>
+  </dependencies>
+</project>
