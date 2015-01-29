@@ -1,63 +1,58 @@
-HowTo: Spring Security
-======================
+HowTheHell: Spring Security
+===========================
 
-![HowTo: Spring Security][logo]
+![HowTheHell: Spring Security][logo]
 
 [![Build Status](https://travis-ci.org/pfac/howto-spring-security.svg?branch=master)](https://travis-ci.org/pfac/howto-spring-security)
 
-**This project is currently not stable. As such, this README has not been updated yet. For a stable reference please refer to tag 0.0.1-SNAPSHOT**
+*This is repository is under (yet another) major reorganization, which will include renaming the repository. Until such a time, this is to be considered work in progress and extremely unstable. Sorry for the inconvenience.*
 
 
 Based on the [official Spring Security reference documentation][spring-security].
 
-This project aims mainly to achieve a working configuration that includes username/password authentication (without any external service) and role-based authentication.
+This project aims mainly to be an archive of working configurations for authentication and authorization using Spring Security.
+
+In other words, it's meant to be the 42 for the question **How the hell do I configure Spring Security?**.
+
+
+## Try it out
+
+*Coming soon*
 
 
 ## Description
 
-In this project we have a Messenger service, which is only accessible to regular users. Administrators are not authorized to access this service (I know, doesn't make sense, but it doesn't really matter).
+Consider an `Messenger` service. It only answers to users it knows (a.k.a, its methods require authentication), and it has three types of messages to deliver:
 
-Configured authentication providers:
-* In memory, configured in `SecurityConfiguration`. Usernames start with `mem`.
-* JDBC, through an embedded H2 database. Usernames start with `db`.
-* Custom JDBC, through the same embedded H2 database but using completely distinct tables. Usernames are replaced with emails ending in `@example.org`.
-* LDAP, through an embedded LDAP server. Usernames start with `ldap`.
-* Custom LDAP + JDBC, where authentication is performed using an embedded LDAP server and authorization is loaded from the embedded database. Usernames start with `mix`.
+* a regular message for all users.
+* a secret message, only for administrators.
+* a top secret message, only meant for the highest pay grade.
 
-Built-in users:
+Respectively, consider the following users:
 
-| Username | Password | Type | Result |
-| -------- | -------- | ---- | ------ |
-| `memdemo`  | `secret` | user | Success |
-| `memadmin` | `53cr37` | admin | Access denied |
-| `dbdemo`   | `secret` | user | Success |
-| `dbadmin`  | `53cr37` | admin | Access denied |
-| `demo@example.org`  | `secret` | user | Success |
-| `admin@example.org`  | `53cr37` | admin | Access denied |
-| `ldapdemo`   | `secret` | user | Success |
-| `ldapadmin`  | `53cr37` | admin | Access denied |
-| `mixdemo`   | `secret` | user | Success |
-| `mixadmin`  | `53cr37` | admin | Access denied |
+| Username | Password     | Type          |
+| `user`   | `secret`     | Regular user  |
+| `admin`  | `53cr37`     | Administrator |
+| `root`   | `70p_53cr3t` | Big Boss      |
+
+Where an email should be used instead of an username, its value should be `<username>@example.com`.
 
 
-## Build it
+## Configurations
 
-Assuming you're using a shell already at the root of the project, run the following command with [Maven][maven] to build the project:
+### Authentication
 
-``` bash
-mvn package
-```
+- [ ] In-memory
+- [ ] JDBC (with default schema)
+- [ ] JDBC (with custom schema)
+- [ ] LDAP
 
-All dependencies and configurations should be automatically taken care of.
+### Authorization
 
-
-## Try it
-
-Still at the root of the project (after building it) use the following command to run the application:
-
-``` bash
-java -jar target/spring-security-0.0.1-SNAPSHOT-jar-with-dependencies.jar
-```
+- [ ] In-memory
+- [ ] JDBC (with default schema)
+- [ ] JDBC (with custom schema)
+- [ ] LDAP + JDBC (with custom schema)
 
 
 ## License
