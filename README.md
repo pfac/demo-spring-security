@@ -1,7 +1,7 @@
 Demo: Spring Security
 ======================
 
-[![Build Status](https://travis-ci.org/pfac/demo-spring-security.svg?branch=dev)](https://travis-ci.org/pfac/demo-spring-security)
+[![Build Status](https://travis-ci.org/pfac/demo-spring-security.svg?branch=dev)](https://travis-ci.org/pfac/demo-spring-security) [![Dependency Status](https://www.versioneye.com/user/projects/562f9f0636d0ab001900157c/badge.svg?style=flat)](https://www.versioneye.com/user/projects/562f9f0636d0ab001900157c)
 
 
 Based on the [official Spring Security reference documentation][spring-security].
