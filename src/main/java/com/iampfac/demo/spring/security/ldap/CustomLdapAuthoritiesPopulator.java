@@ -1,4 +1,4 @@
-package com.iampfac.howto.spring.security.ldap;
+package com.iampfac.demo.spring.security.ldap;
 
 import java.util.Collection;
 
@@ -8,7 +8,7 @@ import org.springframework.ldap.core.DirContextOperations;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.ldap.userdetails.LdapAuthoritiesPopulator;
 
-import com.iampfac.howto.spring.security.jdbc.CustomJdbcUserDetailsService;
+import com.iampfac.demo.spring.security.jdbc.CustomJdbcUserDetailsService;
 
 public class CustomLdapAuthoritiesPopulator implements LdapAuthoritiesPopulator {
 

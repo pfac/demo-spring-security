@@ -1,4 +1,4 @@
-package com.iampfac.howto.spring.security.jdbc;
+package com.iampfac.demo.spring.security.jdbc;
 
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.core.userdetails.UserDetailsService;

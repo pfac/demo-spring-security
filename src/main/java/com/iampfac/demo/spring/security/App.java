@@ -1,4 +1,4 @@
-package com.iampfac.howto.spring.security;
+package com.iampfac.demo.spring.security;
 
 import java.util.Arrays;
 
@@ -11,13 +11,13 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 
-import com.iampfac.howto.spring.security.core.Messenger;
-import com.iampfac.howto.spring.security.io.AbstractConsole;
-import com.iampfac.howto.spring.security.io.ConsoleFactory;
+import com.iampfac.demo.spring.security.core.Messenger;
+import com.iampfac.demo.spring.security.io.AbstractConsole;
+import com.iampfac.demo.spring.security.io.ConsoleFactory;
 
 public class App implements Runnable {
 
-	private ApplicationContext context = new AnnotationConfigApplicationContext("com.iampfac.howto.spring.security.config");
+	private ApplicationContext context = new AnnotationConfigApplicationContext("com.iampfac.demo.spring.security.config");
 
 	public static void main(String[] args) {
 		new App(args).run();

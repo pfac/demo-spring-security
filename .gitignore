@@ -1,1 +1,7 @@
+# Eclipse generated garbage
+.classpath
+.project
+.settings/
+
+# Build artifacts
 /target

@@ -1,7 +1,7 @@
-HowTo: Spring Security
+Demo: Spring Security
 ======================
 
-[![Build Status](https://travis-ci.org/pfac/howto-spring-security.svg?branch=master)](https://travis-ci.org/pfac/howto-spring-security)
+[![Build Status](https://travis-ci.org/pfac/demo-spring-security.svg?branch=dev)](https://travis-ci.org/pfac/demo-spring-security)
 
 
 Based on the [official Spring Security reference documentation][spring-security].

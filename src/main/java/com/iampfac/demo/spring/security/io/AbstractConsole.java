@@ -1,4 +1,4 @@
-package com.iampfac.howto.spring.security.io;
+package com.iampfac.demo.spring.security.io;
 
 public abstract class AbstractConsole {
 

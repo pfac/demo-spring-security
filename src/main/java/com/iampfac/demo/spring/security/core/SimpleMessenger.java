@@ -1,4 +1,4 @@
-package com.iampfac.howto.spring.security.core;
+package com.iampfac.demo.spring.security.core;
 
 public class SimpleMessenger implements Messenger {
 

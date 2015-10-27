@@ -1,4 +1,4 @@
-package com.iampfac.howto.spring.security.jdbc;
+package com.iampfac.demo.spring.security.jdbc;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

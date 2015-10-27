@@ -1,4 +1,4 @@
-package com.iampfac.howto.spring.security.config;
+package com.iampfac.demo.spring.security.config;
 
 import javax.sql.DataSource;
 
@@ -11,8 +11,8 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration;
 
-import com.iampfac.howto.spring.security.jdbc.CustomJdbcUserDetailsService;
-import com.iampfac.howto.spring.security.ldap.CustomLdapAuthoritiesPopulator;
+import com.iampfac.demo.spring.security.jdbc.CustomJdbcUserDetailsService;
+import com.iampfac.demo.spring.security.ldap.CustomLdapAuthoritiesPopulator;
 
 @Configuration
 @EnableGlobalMethodSecurity(prePostEnabled = true)

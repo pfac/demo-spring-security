@@ -1,4 +1,4 @@
-package com.iampfac.howto.spring.security.config;
+package com.iampfac.demo.spring.security.config;
 
 import javax.sql.DataSource;
 
