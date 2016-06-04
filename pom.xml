@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.iampfac.demo</groupId>
   <artifactId>spring-security</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   <name>Demo: Spring Security (defaults)</name>
   <description>Minimal working example of a project using Spring Security in an application.</description>
   
@@ -10,12 +10,12 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     
     <apacheds.server.version>1.5.5</apacheds.server.version>
-    <h2.version>1.4.190</h2.version>
-    <logback.version>1.1.3</logback.version>
-    <slf4j.version>1.7.13</slf4j.version>
-    <spring.version>4.2.3.RELEASE</spring.version>
-    <spring.ldap.version>2.0.4.RELEASE</spring.ldap.version>
-    <spring.security.version>4.0.3.RELEASE</spring.security.version>
+    <h2.version>1.4.192</h2.version>
+    <logback.version>1.1.7</logback.version>
+    <slf4j.version>1.7.21</slf4j.version>
+    <spring.version>4.2.6.RELEASE</spring.version>
+    <spring.ldap.version>2.1.0.RELEASE</spring.ldap.version>
+    <spring.security.version>4.1.0.RELEASE</spring.security.version>
   </properties>
   
   <dependencies>
