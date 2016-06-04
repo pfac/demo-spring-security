@@ -16,6 +16,8 @@
     <spring.version>4.2.6.RELEASE</spring.version>
     <spring.ldap.version>2.1.0.RELEASE</spring.ldap.version>
     <spring.security.version>4.1.0.RELEASE</spring.security.version>
+    
+    <versioneye.maven.version>3.9.2</versioneye.maven.version>
   </properties>
   
   <dependencies>
@@ -105,6 +107,11 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.versioneye</groupId>
+        <artifactId>versioneye-maven-plugin</artifactId>
+        <version>${versioneye.maven.version}</version>
       </plugin>
     </plugins>
   </build>
