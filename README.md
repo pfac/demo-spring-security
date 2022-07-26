@@ -1,7 +1,9 @@
 Demo: Spring Security
 ======================
 
-[![Build Status](https://travis-ci.org/pfac/demo-spring-security.svg?branch=dev)](https://travis-ci.org/pfac/demo-spring-security) [![Dependency Status](https://www.versioneye.com/user/projects/562f9f0636d0ab001900157c/badge.svg?style=flat)](https://www.versioneye.com/user/projects/562f9f0636d0ab001900157c)
+> _**This project is now retired**._
+>
+> _I created this project back in 2014 to be a reference for me and the community. I have long since stopped working with Java in general and Spring in particular._
 
 
 Based on the [official Spring Security reference documentation][spring-security].
